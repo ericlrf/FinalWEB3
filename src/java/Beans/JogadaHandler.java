@@ -6,8 +6,8 @@ public class JogadaHandler {
 
     public static int qtdCliques = 0;
     public static int qtdJogadas = 0;
-    public int qtdAcertos = 0;
-    public String cartaoDescoberto;
+    public static int qtdAcertos = 0;
+    public static String cartaoDescoberto;
 
     public int getQtdAcertos() {
         return qtdAcertos;

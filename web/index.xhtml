@@ -2,20 +2,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <title>Jogo da Memória em JSF</title>
         <link href="#{request.contextPath}/index.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="#{request.contextPath}/index.js"></script>
     </h:head>
     <h:body>
         <h:form>
-            <h:dataTable id="tabelaDados" styleClass="tableData" border="1" value="#{timeHandler.timeList}" var="timeReturn">
-                <h:column>
-                    <!--<h:outputText value="#{timeReturn.name}"/>-->
-                    <h:graphicImage value="brasoes/#{timeReturn.name}.png"></h:graphicImage>
-                </h:column>
+            <!--<h:dataTable border="1" styleClass="tableData" rowClasses="" columnClasses="" value="#{timeHandler.timeList}" var="timeReturn">-->
+            <h:dataTable border="1" value="#{timeHandler.timeList}" var="timeReturn">
+                    <h:column>
+                        <h:commandButton action="#{timeHandler.timeSlecionado(timeReturn)}" image="brasoes/#{timeReturn.name}.png"></h:commandButton>
+                    </h:column>
             </h:dataTable>
-            <h:commandButton action="#{timeHandler.loadTimes()}" value="reiniciar jogo">
+            <h:commandButton action="#{timeHandler.loadTimes()}" value="(Re)Iniciar Jogo">
             </h:commandButton>
         </h:form>
     </h:body>

@@ -4,7 +4,7 @@ function myTimer() {
     {
         var celulas = dom[i];
         var imagem = celulas.src;
-        console.log(imagem);
+//        console.log(imagem);
         celulas.src = "brasoes/background.jpg";
     }
 }

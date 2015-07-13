@@ -7,7 +7,7 @@ public class JogadaHandler {
     public static int qtdCliques = 0;
     public static int qtdJogadas = 0;
     public static int qtdAcertos = 0;
-    public static String cartaoDescoberto;
+    public static Time cartaoDescoberto;
 
     public int getQtdAcertos() {
         return qtdAcertos;
@@ -17,11 +17,11 @@ public class JogadaHandler {
         this.qtdAcertos = qtdAcertos;
     }
 
-    public String getCartaoDescoberto() {
+    public Time getCartaoDescoberto() {
         return cartaoDescoberto;
     }
 
-    public void setCartaoDescoberto(String cartaoDescoberto) {
+    public void setCartaoDescoberto(Time cartaoDescoberto) {
         this.cartaoDescoberto = cartaoDescoberto;
     }
 
@@ -44,12 +44,12 @@ public class JogadaHandler {
     public void timeSelecionado(Time time) {
         qtdCliques++;
         if (qtdCliques % 2 == 0) {
-            if (cartaoDescoberto == time.getName()) {
+            if (cartaoDescoberto == time) {
                 qtdAcertos++;
             }
             qtdJogadas++;
         } else {
-            cartaoDescoberto = time.getName();
+            cartaoDescoberto = time;
             System.out.println(time.getName());
         }
         System.out.println(qtdCliques);

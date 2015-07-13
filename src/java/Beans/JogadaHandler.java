@@ -4,10 +4,10 @@ import Model.Time;
 
 public class JogadaHandler {
 
-    private int qtdCliques = 0;
-    private int qtdJogadas = 0;
-    private int qtdAcertos = 0;
-    private String cartaoDescoberto;
+    public static int qtdCliques = 0;
+    public static int qtdJogadas = 0;
+    public int qtdAcertos = 0;
+    public String cartaoDescoberto;
 
     public int getQtdAcertos() {
         return qtdAcertos;

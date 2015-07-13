@@ -5,7 +5,7 @@ function myTimer() {
         var celulas = dom[i];
         var imagem = celulas.src;
         console.log(imagem);
-        celulas.src = "http://localhost:8084/JSF-JogoDaMemoria/faces/brasoes/background.jpg";
+        celulas.src = "brasoes/background.jpg";
     }
 }
 

@@ -25,6 +25,8 @@ public class TimeHandler {
 
     public void loadTimes() {
         timeList.clear();
+        JogadaHandler.qtdCliques = 0;
+        JogadaHandler.qtdJogadas = 0;
         Time temp = new Time();
         temp.setName("brasao-vasco-1383013201926_80x80");
         timeList.add(temp);

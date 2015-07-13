@@ -10,42 +10,11 @@
         <message-bundle>Warnings.CustomMessages</message-bundle>
     </application>
     <managed-bean>
-        <managed-bean-name>userHandler</managed-bean-name>
-        <managed-bean-class>Beans.UserHandler</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>    
-    <managed-bean>
         <managed-bean-name>timeHandler</managed-bean-name>
         <managed-bean-class>Beans.TimeHandler</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>    
     <navigation-rule>
-        <from-view-id>/register.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>main</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>error</from-outcome>
-            <to-view-id>/register.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>main</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/edit.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>main</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>error</from-outcome>
-            <to-view-id>/edit.xhtml</to-view-id>
-        </navigation-case>
     </navigation-rule>
 </faces-config>

@@ -14,6 +14,11 @@
         <managed-bean-class>Beans.TimeHandler</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>    
+    <managed-bean>
+        <managed-bean-name>jogadaHandler</managed-bean-name>
+        <managed-bean-class>Beans.JogadaHandler</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>    
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
     </navigation-rule>

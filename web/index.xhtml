@@ -14,11 +14,18 @@
             <!--<h:dataTable border="1" styleClass="tableData" rowClasses="" columnClasses="" value="#{timeHandler.timeList}" var="timeReturn">-->
             <h:dataTable border="1" value="#{timeHandler.timeList}" var="timeReturn">
                     <h:column>
-                        <h:commandButton action="#{timeHandler.timeSlecionado(timeReturn)}" image="brasoes/#{timeReturn.name}.png"></h:commandButton>
+                        <h:commandButton action="#{jogadaHandler.timeSelecionado(timeReturn)}" image="brasoes/#{timeReturn.name}.png"></h:commandButton>
                     </h:column>
             </h:dataTable>
             <h:commandButton action="#{timeHandler.loadTimes()}" value="(Re)Iniciar Jogo">
             </h:commandButton>
+            <br />
+            <p>Quantidade de cliques</p>
+            <h:outputText value="#{jogadaHandler.qtdCliques}"></h:outputText>
+            <p>Quantidade de jogadas</p>
+            <h:outputText value="#{jogadaHandler.qtdJogadas}"></h:outputText>
+            <p>Quantidade de acertos</p>
+            <h:outputText value="#{jogadaHandler.qtdAcertos}"></h:outputText>
         </h:form>
     </h:body>
 </html>

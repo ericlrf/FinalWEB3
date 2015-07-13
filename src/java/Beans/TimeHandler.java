@@ -110,8 +110,4 @@ public class TimeHandler {
     public void embaralharTimes(){
         Collections.shuffle(timeList);
     }
-
-    public void timeSlecionado(Time time){
-        System.out.println(time.getName());
-    }
 }

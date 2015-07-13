@@ -1,13 +1,17 @@
 function myTimer() {
     var dom = document.getElementsByTagName("input");
-    for(i=0; i < i.length; i++)
+    for (i = 0; i < dom.length; i++)
     {
-        console.log(dom[i]);
+        var celulas = dom[i];
+        console.log(celulas.src);
+//    alert(celulas.src);
     }
 }
 
 function init() {
-    var myVar = setInterval(function() {myTimer();}, 2000);
+    var myVar = setTimeout(function() {
+        myTimer();
+    }, 2000);
 }
 
 onload = init;
